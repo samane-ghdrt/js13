@@ -9,3 +9,13 @@ num2 = 3
 */
 
 //! Answer:
+let num1=Math.floor(Math.random()*15)+1;
+let num2=Math.floor(Math.random()*15)+1;
+let arr=[];
+arr.push(num1);
+arr.push(num2);
+for (let i = 0; i < 8; i++) {
+arr.push((arr[i]+arr[i+1])*2);
+}
+console.log(arr.join(','));
+

@@ -146,3 +146,47 @@ const names = [
   "Naomi",
 ];
 //! Answer:
+
+
+
+function findNamesStartingWithLetter() {
+  const letter = prompt("Enter a letter (a-z or A-Z):").toLowerCase();
+
+  if (!/^[a-zA-Z]$/.test(letter)) {
+    alert("Please enter a single alphabet character.");
+    return findNamesStartingWithLetter();
+  }
+
+  if(alpha.split('').length!==1){
+      alert('enter only one of the alphabets')
+      return findNamesStartingWithLetter();
+    }
+
+  const namesStartingWithLetter = names.filter(name => name.toLowerCase().startsWith(letter));
+
+  if (namesStartingWithLetter.length === 0) {
+    console.log("Nothing found");
+  } else {
+    console.log(namesStartingWithLetter);
+  }
+}
+
+// let alpha=prompt('enter alphabets');
+// alpha.toLocaleLowerCase();
+// while (!/[a-z]/.test(alpha)) {
+//   alert('enter only alphabets')
+//    alpha=prompt('enter alphabets');
+// }
+// while(alpha.split('').length!==1){
+//   alert('enter only one of the alphabets')
+//    alpha=prompt('enter alphabets');
+// }
+
+// for (const element of names) {
+//   if(element.split('')[0]===alpha){
+//     console.log(element);
+//   }else {
+//     console.log("nothing found");
+    
+//   }
+// }
